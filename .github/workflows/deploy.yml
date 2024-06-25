@@ -11,8 +11,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.if8t9tg.mongodb.net
-      MONGODB_USERNAME: farurej2
-      MONGODB_PASSWORD: sYolh30cMPQPCtsC
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +28,7 @@ jobs:
       - name: Install driver
         run: npm install mongodb
       - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:${{env.PORT}}
+        run: npm start & npx wait-on http://127.0.0.1:$PORT
       - name: Run tests
         run: npm test
       - name: Output information
