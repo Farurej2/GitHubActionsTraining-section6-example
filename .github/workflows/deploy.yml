@@ -10,7 +10,7 @@ env:
 jobs:
   test:
     env:
-      MONGODB_CLUSTER_ADDRESS: cluster0.ovqkno7.mongodb.net
+      MONGODB_CLUSTER_ADDRESS: cluster0.0siwlpr.mongodb.net
       MONGODB_USERNAME: farurej2
       MONGODB_PASSWORD: MUN9fymF4FZ0LEsH
       PORT: 8080
